@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Employee component DEMO</title>
     <script type="module" src="./dist/main.js"></script>
   </head>
   <body>
-    <employee-search id="search"></employee-search>
+    <employee-search-input></employee-search-input>
 
     <script type="module">
-      customElements.whenDefined("employee-search").then(() => {
+      customElements.whenDefined("employee-search-input").then(() => {
         const search = document.querySelector("employee-search");
         search.addEventListener("search", (e) => {
           console.log(e.detail);

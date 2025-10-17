@@ -1,1 +1,1 @@
-export { EmployeeSearch as MyElement } from "./employee-search";
+export { EmployeeSearchInput as MyElement } from "./employee-search-input";

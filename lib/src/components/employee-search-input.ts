@@ -4,8 +4,8 @@ import type { Data } from "../typings";
 import debounce from "lodash.debounce";
 import { getAllData } from "../data";
 
-@customElement("employee-search")
-export class EmployeeSearch extends LitElement {
+@customElement("employee-search-input")
+export class EmployeeSearchInput extends LitElement {
   static styles = css`
     :host {
       display: inline-flex;
