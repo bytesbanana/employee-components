@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module" src="./dist/main.js"></script>
+  </head>
+  <body>
+    <employee-search id="search"></employee-search>
+
+    <script type="module">
+      customElements.whenDefined("employee-search").then(() => {
+        const search = document.querySelector("employee-search");
+        search.addEventListener("search", (e) => {
+          console.log(e.detail);
+        });
+      });
+    </script>
+  </body>
+</html>
