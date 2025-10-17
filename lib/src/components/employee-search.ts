@@ -2,7 +2,7 @@ import { LitElement, html } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import type { Data } from "../typings";
 import debounce from "lodash.debounce";
-import data from "../data/data.json" with { type: "json" };
+import { getAllData } from "../data";
 
 @customElement("employee-search")
 export class EmployeeSearch extends LitElement {
@@ -47,8 +47,8 @@ export class EmployeeSearch extends LitElement {
 
     try {
       this.loading = true;
-      await new Promise((resolve) => setTimeout(resolve, 300));
-      this.results = (data as Data[]).filter(({ employee }) => {
+      const data = await getAllData();
+      this.results = data.filter(({ employee }) => {
         return (
           employee.name.includes(value) ||
           employee.id.includes(value) ||
