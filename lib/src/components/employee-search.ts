@@ -1,4 +1,4 @@
-import { LitElement, html } from "lit";
+import { LitElement, html, css } from "lit";
 import { customElement, property, state } from "lit/decorators.js";
 import type { Data } from "../typings";
 import debounce from "lodash.debounce";
@@ -6,6 +6,11 @@ import { getAllData } from "../data";
 
 @customElement("employee-search")
 export class EmployeeSearch extends LitElement {
+  static styles = css`
+    :host {
+      display: inline-flex;
+    }
+  `;
   @property({ type: String })
   id = "employee-search-input";
   @property({ type: String })
@@ -35,7 +40,11 @@ export class EmployeeSearch extends LitElement {
 
   private loadingTemplate() {
     if (this.loading) {
-      return html`<div>loading...</div>`;
+      return html` <iconify-icon
+        icon="eos-icons:loading"
+        width="24"
+        height="24"
+      ></iconify-icon>`;
     }
     return "";
   }

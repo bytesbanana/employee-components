@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "iconify-icon": "^3.0.1",
     "lit": "^3.3.1",
     "lodash.debounce": "^4.0.8"
   },
@@ -18,7 +19,7 @@
     "prettier": "^3.6.2",
     "tsup": "^8.5.0",
     "typescript": "~5.9.3",
-    "vite": "^7.1.7",
+    "vite": "^7.1.10",
     "vite-plugin-dts": "^4.5.4"
   },
   "peerDependencies": {
